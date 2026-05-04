@@ -34,3 +34,16 @@ jobs:
         working-directory: ./Bai04
         run: mvn clean test
 
+      # --- BÀI 5: Chạy Test + Check Coverage (JaCoCo) ---
+      - name: Build, Test and Verify Coverage Bai05
+        working-directory: ./Bai05
+        run: mvn clean verify
+
+      # Chỉ upload file báo cáo HTML của Bài 5
+      - name: Upload JaCoCo Coverage Report (Bai05)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jacoco-coverage-report-${{ matrix.os }}
+          path: Bai05/target/site/jacoco/
+          retention-days: 7
