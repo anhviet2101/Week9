@@ -7,7 +7,6 @@ public class DepositTest{
     public void testDeposit() {
         Account acc = new CheckingAccount(12345, 100.0);
         acc.deposit(50.0);
-        // Cố tình sửa số tiền kỳ vọng sai để test bị tạch
-        assertEquals(9999.0, acc.getBalance());
+        assertEquals(150, acc.getBalance());
         }
 }
