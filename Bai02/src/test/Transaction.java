@@ -53,7 +53,7 @@ public class Transaction {
         this.finalBalance = finalBalance;
     }
 
-    / Vi phạm: Thiếu Javadoc cho phương thức public (Google Style cực kỳ khắt khe lỗi này)
+    // Vi phạm: Thiếu Javadoc cho phương thức public (Google Style cực kỳ khắt khe lỗi này)
     // Vi phạm: Tên phương thức không tuân thủ camelCase (có dấu gạch dưới)
     // Vi phạm: Tên tham số 't' quá ngắn, không rõ nghĩa
     public static String get_type_string(int t) {
