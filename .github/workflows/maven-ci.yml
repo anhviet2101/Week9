@@ -53,6 +53,7 @@ jobs:
         continue-on-error: true
 
       - name: Bước 4 - Bot Checkstyle (Inline Feedback)
+        if: runner.os == 'Linux'
         uses: dbelyaev/action-checkstyle@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
