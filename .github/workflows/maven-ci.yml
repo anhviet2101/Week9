@@ -2,9 +2,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
@@ -47,3 +47,14 @@ jobs:
           name: jacoco-coverage-report-${{ matrix.os }}
           path: Bai05/target/site/jacoco/
           retention-days: 7
+
+      - name: Bước 3 - Chạy Test và Soi lỗi
+        run: mvn clean verify
+        continue-on-error: true
+
+      - name: Bước 4 - Bot Checkstyle (Inline Feedback)
+        uses: dbelyaev/action-checkstyle@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          checkstyle_config: google_checks.xml
