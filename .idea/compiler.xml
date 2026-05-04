@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Bai05" />
         <module name="Bai04" />
-        <module name="Bai02 (1)" />
         <module name="Bai03" />
         <module name="Bai02" />
         <module name="Bai01" />
@@ -16,5 +15,8 @@
         <module name="maven-lab-01" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Bai02 (1)" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

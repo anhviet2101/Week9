@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.practice.maven</groupId>
-    <artifactId>maven-lab-01</artifactId>
+    <artifactId>Bai01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -15,6 +15,12 @@
     </properties>
 
     <dependencies>
+        <!--
+    GHI CHÚ CẤU HÌNH HỆ THỐNG:
+    1. JUnit 5: Đã xóa JUnit 4 để tránh xung đột. Dùng scope test để chỉ chạy trong test.
+    2. Logback: Dùng để ghi log thay cho System.out.println. Đã gỡ các log cũ để tránh lỗi SLF4J.
+    3. Hibernate: Sử dụng bản 6.2.0.Final theo đúng yêu cầu đề bài.
+-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
