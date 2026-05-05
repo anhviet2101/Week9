@@ -15,7 +15,7 @@
     </properties>
 
     <dependencies>
-        <!-- Phích cắm Logback: Cho phép in log toàn dự án -->
+        <!-- Cho phép in log toàn dự án -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -23,7 +23,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Ổ cắm SLF4J -->
+        <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -31,7 +31,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Đồ nghề test độc tôn: JUnit 5 (Đã xóa TestNG) -->
+        <!-- JUnit 5 (Đã xóa TestNG) -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -42,7 +42,7 @@
 
     <build>
         <plugins>
-            <!-- Cảnh sát Checkstyle -->
+            <!-- Checkstyle -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
