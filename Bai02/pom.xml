@@ -15,7 +15,16 @@
     </properties>
 
     <dependencies>
-        <!-- Ổ cắm SLF4J -->
+        <!-- Cách đặt các cấp độ log (Logging Levels) cho dự án này:
+INFO (Thông tin luồng chính): Dùng để xác nhận các hành động nghiệp vụ đã hoàn thành.
+DEBUG (Gỡ lỗi hệ thống): Dành cho mày lúc đang code để biết chương trình chạy tới đâu.
+WARN (Cảnh báo): Những lỗi do logic nghiệp vụ hoặc do người dùng sai, nhưng hệ thống không chết.
+ERROR (Lỗi hệ thống): Những exception khiến chương trình ngỏm củ tỏi một phần.
+
+Dữ liệu điểm (Data points) bắt buộc phải có trong log:
+Mỗi dòng log phải gắn kèm Account Number (ID tài khoản), Amount (Số tiền giao dịch),
+và Transaction Type (Loại giao dịch) -->
+        <!-- SLF4J -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -23,7 +32,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- Phích cắm Logback để in log ra màn hình -->
+        <!-- Logback để in log ra màn hình -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -42,7 +51,7 @@
 
     <build>
         <plugins>
-            <!-- Cảnh sát Checkstyle: Đang bật mode cực gắt (true) -->
+            <!-- Checkstyle -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
